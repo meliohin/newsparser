@@ -1,18 +1,18 @@
 ## newsparser
 News Parser Test
 
-#Requirements:
+# Requirements:
 
 - docker
 - docker-compose 
 
 
-#Downloading:
+# Downloading:
 
 $ git clone github.com/meliohin/test_appfollow
 
 
-#Setting up test environment:
+# Setting up test environment:
 
 $ docker-compose up
 
@@ -20,7 +20,7 @@ $ docker-compose up
 Django test-server, celery worker output and other additional info will be avaliable in console.
 
 
-#ccessing test page:
+# Accessing test page:
 
 http://127.0.0.1:8000/posts/
 
