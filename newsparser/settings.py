@@ -27,7 +27,7 @@ SECRET_KEY = '=)%m^lm(3*z+gn6$-q4ffxqxbs7xwu-hp$2yipq2fmjtz9$+4f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '88.99.39.1',]
 
 # Celery config 
 
