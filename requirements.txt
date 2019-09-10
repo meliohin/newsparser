@@ -1,0 +1,7 @@
+Django
+requests
+beautifulsoup4
+celery
+redis
+djangorestframework
+django-filter
