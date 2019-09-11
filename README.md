@@ -9,7 +9,7 @@ News Parser Test
 
 ## Downloading:
 
-$ git clone github.com/meliohin/test_appfollow
+$ git clone https://github.com/meliohin/newsparser
 
 
 ## Setting up test environment:
