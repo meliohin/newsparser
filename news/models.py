@@ -24,10 +24,9 @@ class News(models.Model):
             if r.status_code == 200:
                 res = r.text
             else:
-                # log this
+                print('Response is not OK:', r.status_code, r.text)
                 res = None
         except requests.exceptions.RequestException as e:
-            # log this
             print (str(e))
             res = None
         return res
@@ -66,7 +65,7 @@ class News(models.Model):
             news_list = cls.parse_html(html)
             cls.insert_to_db(news_list)
         else:
-            # No html returned, log thiss
+            print('No HTML returned.')
             pass
 
 
