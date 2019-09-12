@@ -42,7 +42,7 @@ class News(models.Model):
             url = a.attrs['href']
             # self-hosted urls like "item?id=20927552"
             if not 'http' in url:
-                url = self.PARSE_URL + url
+                url = cls.PARSE_URL + url
             title = a.text
             news_list.append({'url': url, 'title': title})
         return news_list

@@ -29,18 +29,19 @@ class NewsModelTestCase(TestCase):
                 <a class="storylink" href ="http://url1.ru/">news1</a>
                 <a class="storylink" href ="http://url2.ru/">news2</a>
                 <a class="storylink" href ="http://url3.ru/">news3</a>
+                <a class="storylink" href ="item?id=20927552">news4</a>
             </html>
         """
         l = News.parse_html(html)
-        if not (l[0]['url'] == 'http://url1.ru/' and
-                l[0]['title'] == 'news1' and
-                l[1]['url'] == 'http://url2.ru/' and
-                l[1]['title'] == 'news2' and
-                l[2]['url'] == 'http://url3.ru/' and
-                l[2]['title'] == 'news3'
-            ):
-            test_result = False
-        self.assertTrue(test_result)
+        self.assertEqual(l[0]['url'], 'http://url1.ru/')
+        self.assertEqual(l[0]['title'], 'news1')
+        self.assertEqual(l[1]['url'], 'http://url2.ru/')
+        self.assertEqual(l[1]['title'], 'news2')
+        self.assertEqual(l[2]['url'], 'http://url3.ru/')
+        self.assertEqual(l[2]['title'], 'news3')
+        self.assertEqual(l[3]['url'], 'https://news.ycombinator.com/item?id=20927552')
+        self.assertEqual(l[3]['title'], 'news4')
+
 
     def test_insert_to_db(self):
         l = [
